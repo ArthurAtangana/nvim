@@ -789,6 +789,8 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
     integrations = {
+      mason = true,
+      neotree = true,
       mini = {
         enabled = true,
       },
