@@ -378,6 +378,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sh', function()
         builtin.find_files { find_command = { 'rg', '--files', '-g', '!.git', '--hidden' } }
       end, { desc = '[S]earch [H]idden + files' })
+      vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = '[S]earch [M]an pages' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
