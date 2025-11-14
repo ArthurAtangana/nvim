@@ -917,6 +917,13 @@ require('lazy').setup({
       -- Better start screen for nvim
       require('mini.starter').setup()
 
+      -- File explorer
+      require('mini.files').setup()
+      -- File explorer keymap
+      vim.keymap.set('n', '<leader>e', function()
+        require('mini.files').open()
+      end, { desc = 'Open [E]xplorer' })
+
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
